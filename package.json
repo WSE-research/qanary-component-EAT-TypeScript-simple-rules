@@ -1,0 +1,31 @@
+{
+    "private": true,
+    "license": "SEE LICENSE IN LICENSE",
+    "scripts": {
+        "build": "turbo run build",
+        "clean": "turbo run clean",
+        "dev": "turbo run dev",
+        "format": "turbo run format",
+        "format:fix": "turbo run format:fix",
+        "init": "npm ci && npm run build",
+        "lint": "turbo run lint",
+        "lint:fix": "turbo run lint:fix",
+        "test": "turbo run test && if [ -x ./.bin/merge-coverage-reports.sh ]; then ./.bin/merge-coverage-reports.sh; else echo \"merge-coverage-reports.sh not found, skipping.\"; fi",
+        "test:ci": "turbo run test",
+        "reinit": "npm install && npm run build"
+    },
+    "workspaces": [
+        "packages/*",
+        "sdk/*",
+        "qanary-component-eat-simple"
+    ],
+    "devDependencies": {
+        "prettier": "^2.8.3",
+        "turbo": "^1.8.3"
+    },
+    "volta": {
+        "node": "18.12.1",
+        "npm": "8.19.2"
+    },
+    "packageManager": "npm@11.7.0"
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "ts-config-sdk/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "qanary-component-core": ["../packages/qanary-component-core/src/index.ts"],
+      "qanary-component-core/*": ["../packages/qanary-component-core/src/*"],
+      "shared": ["../packages/shared/src/index.ts"],
+      "shared/*": ["../packages/shared/src/*"]
+    }
+  },
+  "include": ["src"]
+}
+

@@ -1,0 +1,55 @@
+{
+    "name": "qanary-component-eat-simple",
+    "version": "1.0.0",
+    "description": "A simple Qanary component template for EAT extraction.",
+    "license": "SEE LICENSE IN LICENSE",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "clean": "rimraf dist",
+        "dev": "nodemon src/index.ts",
+        "format": "prettier --check src",
+        "format:fix": "prettier --write src",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
+        "test": "npm run build --workspace=api && npm run build --workspace=shared && npm run build --workspace=qanary-component-core && jest --coverage --detectOpenHandles"
+    },
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "api": "*",
+        "qanary-component-core": "*",
+        "shared": "*"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "eslint": "^8.33.0",
+        "eslint-config-sdk": "*",
+        "jest": "^29.4.1",
+        "jest-config-sdk": "*",
+        "ts-jest": "^29.2.5",
+        "nodemon": "2.0.20",
+        "openapi-types": "12.1.0",
+        "prettier": "^2.8.3",
+        "prettier-config-sdk": "*",
+        "rimraf": "^4.1.2",
+        "ts-config-sdk": "*",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5"
+    },
+    "jest": {
+        "preset": "jest-config-sdk",
+        "moduleNameMapper": {
+            "^qanary-component-core$": "<rootDir>/../packages/qanary-component-core/src/index.ts",
+            "^qanary-component-core/(.*)$": "<rootDir>/../packages/qanary-component-core/src/$1",
+            "^shared$": "<rootDir>/../packages/shared/src/index.ts",
+            "^shared/(.*)$": "<rootDir>/../packages/shared/src/$1"
+        }
+    },
+    "prettier": "prettier-config-sdk",
+    "volta": {
+        "extends": "../package.json"
+    }
+}

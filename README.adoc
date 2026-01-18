@@ -1,0 +1,88 @@
+:toc:
+:toclevels: 5
+:toc-placement!:
+:source-highlighter: highlight.js
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
++++
+<img align="right" role="right" height="128" src="https://github.com/WDAqua/Qanary/blob/master/doc/logo-qanary_s.png?raw=true"/>
++++
+
+= Qanary Component EAT Simple
+
+This repository contains a minimal Qanary component scaffold called `qanary-component-eat-simple`.
+It is intended as a starting point for computing the Expected Answer Type (EAT) for a given question runs with the Qanary component core.
+This implementation is based on a https://github.com/fredericbahr/quatsch-project-22/[final project] in the https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/34772353040?3[course Question Answering & Chatbots] at https://www.htwk-leipzig.de/[Leipzig University of Applied Sciences] and serves as a proof-of-concept for TypeScript-based Qanary components.
+Therefore, the functionality of the implementation is kept minimal and focused on the core implementation of Qanary components using TypeScript.
+
+
+---
+
+toc::[]
+
+---
+
+== Overview
+
+The component exposes the standard Qanary endpoints and integrates with the Qanary pipeline.
+The purpose of this component is to determine the expected answer type of an English question (i.e., the type of the answer that is considered to be expected for the question) and store it in the Qanary triplestore as an annotation.
+The following expected answer types are supported by this component:
+
+- `urn:qanary:eat#location` identified by the prefix `where` in the question
+- `urn:qanary:eat#person` identified by the prefix `who` in the question
+- `urn:qanary:eat#datetime` identified by the prefix `when`, `what time`, or `what date` in the question
+- `urn:qanary:eat#number` identified by the prefix `how much` or `how many` in the question
+
+The expected answer type is expressed as annotation `urn:qanary:eat#AnnotationOfExpectedAnswerType`.
+
+Use the following SPARQL query to get the expected answer type for a question:
+[source, sparql]
+----
+PREFIX oa: <http://www.w3.org/ns/openannotation/core/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX qa: <http://www.wdaqua.eu/qa#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX eat: <urn:qanary:eat#>
+SELECT *
+FROM <GRAPH_ID>
+WHERE {
+  ?annotation rdf:type eat:AnnotationOfExpectedAnswerType ;
+              oa:hasBody ?body ;
+              oa:hasTarget ?target ;
+              oa:annotatedBy ?annotator ;
+              oa:annotatedAt ?date .
+  ?target oa:hasSelector ?selector ;
+          oa:hasSource ?questionUri .
+  ?selector oa:start ?start ;
+            oa:end ?end .
+}
+----
+
+== Building and Running
+
+=== Run locally
+
+Use the provided run script which installs dependencies, builds required workspaces, runs tests, and starts the component:
+
+[source, bash]
+----
+./qanary-component-eat-simple/run.sh
+----
+
+
+== Environment Variables
+
+The component can be configured via the following variables:
+* `SPRING_BOOT_ADMIN_URL`: The URL of the Spring Boot admin server, e.g., `http://localhost:40111`.
+* `QANARY_HOST`: The host of the Qanary server, e.g., `localhost`.
+* `QANARY_PORT`: The port of the Qanary server, e.g., `40500`.
+
+== Disclaimer
+
+This project is provided "as is" without warranty of any kind.

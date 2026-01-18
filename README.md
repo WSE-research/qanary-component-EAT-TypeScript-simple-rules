@@ -1,1 +1,0 @@
-# qanary-component-EAT-TypeScript-simple-rules

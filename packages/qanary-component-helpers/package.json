@@ -1,0 +1,52 @@
+{
+  "name": "qanary-component-helpers",
+  "version": "1.0.0",
+  "description": "Helper library for Qanary components written in TypeScript",
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --c src",
+    "format:fix": "prettier --w src",
+    "prepublishOnly": "npm run build",
+    "test": "jest --coverage --detectOpenHandles"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "nodemon": "3.1.11",
+    "qanary-component-core": "*",
+    "shared": "*",
+    "sparql-http-client": "^2.4.2",
+    "ts-node": "1.7.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "@types/rdf-js": "^4.0.2",
+    "@types/sparql-http-client": "^2.2.8",
+    "api": "*",
+    "eslint": "^8.33.0",
+    "eslint-config-sdk": "*",
+    "jest": "^29.4.1",
+    "jest-config-sdk": "*",
+    "ts-jest": "^29.2.5",
+    "openapi-types": "12.1.0",
+    "prettier": "^2.8.3",
+    "prettier-config-sdk": "*",
+    "ts-config-sdk": "*",
+    "typescript": "^4.9.5"
+  },
+  "jest": {
+    "preset": "jest-config-sdk"
+  },
+  "prettier": "prettier-config-sdk",
+  "volta": {
+    "extends": "../../package.json"
+  }
+}
