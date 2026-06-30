@@ -30,7 +30,7 @@
         "@types/node": "^18.11.18",
         "eslint": "^8.33.0",
         "eslint-config-sdk": "*",
-        "jest": "^29.4.1",
+        "jest": "^30.4.2",
         "jest-config-sdk": "*",
         "ts-jest": "^29.2.5",
         "openapi-types": "12.1.0",

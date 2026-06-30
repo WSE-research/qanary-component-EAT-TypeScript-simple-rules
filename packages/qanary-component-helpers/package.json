@@ -26,14 +26,14 @@
     "ts-node": "1.7.1"
   },
   "devDependencies": {
-    "@types/jest": "^29.4.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^18.11.18",
     "@types/rdf-js": "^4.0.2",
     "@types/sparql-http-client": "^2.2.8",
     "api": "*",
     "eslint": "^8.33.0",
     "eslint-config-sdk": "*",
-    "jest": "^29.4.1",
+    "jest": "^30.4.2",
     "jest-config-sdk": "*",
     "ts-jest": "^29.2.5",
     "openapi-types": "12.1.0",

@@ -23,12 +23,12 @@
         "ts-node": "1.7.1"
     },
     "devDependencies": {
-        "@types/jest": "^29.4.0",
+        "@types/jest": "^30.0.0",
         "@types/node": "^18.11.18",
         "api": "*",
         "eslint": "^8.33.0",
         "eslint-config-sdk": "*",
-        "jest": "^26.5.3",
+        "jest": "^30.4.2",
         "jest-config-sdk": "*",
         "prettier": "^2.8.3",
         "prettier-config-sdk": "*",
