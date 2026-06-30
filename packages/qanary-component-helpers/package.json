@@ -31,7 +31,7 @@
     "@types/rdf-js": "^4.0.2",
     "@types/sparql-http-client": "^2.2.8",
     "api": "*",
-    "eslint": "^8.33.0",
+    "eslint": "^10.6.0",
     "eslint-config-sdk": "*",
     "jest": "^29.4.1",
     "jest-config-sdk": "*",
