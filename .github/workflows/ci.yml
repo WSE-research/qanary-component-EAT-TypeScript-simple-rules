@@ -1,0 +1,27 @@
+# CI for the EAT TypeScript turborepo.
+# Installs the workspace, builds every package and runs the test suites on every
+# PR/push. (Lint is currently not wired in: the shared `eslint-config-sdk`
+# references plugins that aren't installed in this monorepo — a separate fix.)
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["*"]
+  pull_request:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build all packages
+        run: npm run build
+      - name: Run tests
+        run: npm run test:ci
