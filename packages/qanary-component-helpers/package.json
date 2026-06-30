@@ -22,14 +22,14 @@
     "nodemon": "3.1.11",
     "qanary-component-core": "*",
     "shared": "*",
-    "sparql-http-client": "^2.4.2",
+    "sparql-http-client": "^3.1.0",
     "ts-node": "1.7.1"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
     "@types/node": "^18.11.18",
     "@types/rdf-js": "^4.0.2",
-    "@types/sparql-http-client": "^2.2.8",
+    "@types/sparql-http-client": "^3.1.0",
     "api": "*",
     "eslint": "^8.33.0",
     "eslint-config-sdk": "*",
