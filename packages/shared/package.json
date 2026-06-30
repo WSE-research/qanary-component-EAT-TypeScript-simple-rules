@@ -34,7 +34,7 @@
         "prettier-config-sdk": "*",
         "rdf-js": "^4.0.2",
         "ts-config-sdk": "*",
-        "typescript": "^4.9.4"
+        "typescript": "^6.0.3"
     },
     "jest": {
         "preset": "jest-config-sdk"

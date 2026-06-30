@@ -40,7 +40,7 @@
     "prettier": "^2.8.3",
     "prettier-config-sdk": "*",
     "ts-config-sdk": "*",
-    "typescript": "^4.9.5"
+    "typescript": "^6.0.3"
   },
   "jest": {
     "preset": "jest-config-sdk"
