@@ -23,7 +23,7 @@
     "qanary-component-core": "*",
     "shared": "*",
     "sparql-http-client": "^2.4.2",
-    "ts-node": "1.7.1"
+    "ts-node": "10.9.2"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
