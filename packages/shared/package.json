@@ -26,7 +26,7 @@
         "@types/jest": "^29.4.0",
         "@types/node": "^18.11.18",
         "api": "*",
-        "eslint": "^8.33.0",
+        "eslint": "^10.6.0",
         "eslint-config-sdk": "*",
         "jest": "^26.5.3",
         "jest-config-sdk": "*",
