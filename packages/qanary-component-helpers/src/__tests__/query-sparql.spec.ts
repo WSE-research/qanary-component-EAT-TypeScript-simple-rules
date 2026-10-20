@@ -29,7 +29,7 @@ describe("query sparql", () => {
 
       const result = await selectSparql(endpoint, query);
 
-      expect(mockSelect).toBeCalledWith(query);
+      expect(mockSelect).toHaveBeenCalledWith(query);
       expect(result).toEqual([]);
     });
   });
@@ -41,7 +41,7 @@ describe("query sparql", () => {
 
       await askSparql(endpoint, query);
 
-      expect(mockAsk).toBeCalledWith(query);
+      expect(mockAsk).toHaveBeenCalledWith(query);
     });
 
     it("should return true if the query returns true", async () => {

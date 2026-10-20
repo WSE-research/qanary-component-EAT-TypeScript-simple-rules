@@ -27,10 +27,11 @@
     "devDependencies": {
         "@types/cors": "^2.8.13",
         "@types/express": "^4.17.17",
+        "@types/jest": "^30.0.0",
         "@types/node": "^18.11.18",
         "eslint": "^8.33.0",
         "eslint-config-sdk": "*",
-        "jest": "^29.4.1",
+        "jest": "^30.4.2",
         "jest-config-sdk": "*",
         "ts-jest": "^29.4.11",
         "openapi-types": "12.1.3",
