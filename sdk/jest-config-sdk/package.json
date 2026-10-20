@@ -5,6 +5,6 @@
   "license" : "SEE LICENSE IN LICENSE",
   "main": "jest-preset.js",
   "dependencies": {
-    "ts-jest": "^26.5.0"
+    "ts-jest": "^29.4.11"
   }
 }
