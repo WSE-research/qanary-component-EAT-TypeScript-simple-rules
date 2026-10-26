@@ -1,7 +1,8 @@
 # CI for the EAT TypeScript turborepo.
 # Installs the workspace, builds every package and runs the test suites on every
-# PR/push. (Lint is currently not wired in: the shared `eslint-config-sdk`
-# references plugins that aren't installed in this monorepo — a separate fix.)
+# PR/push. (Lint is not wired in yet: `npm run lint` runs with the ESLint flat
+# config, but the existing sources still report import-order and unused-import
+# errors that need a cleanup first.)
 name: CI
 
 on:
