@@ -21,11 +21,11 @@
     ],
     "devDependencies": {
         "prettier": "^2.8.3",
-        "turbo": "^1.8.3"
+        "turbo": "^2.10.1"
     },
     "volta": {
-        "node": "18.12.1",
-        "npm": "8.19.2"
+        "node": "22.23.3",
+        "npm": "10.9.9"
     },
     "packageManager": "npm@11.7.0"
 }
