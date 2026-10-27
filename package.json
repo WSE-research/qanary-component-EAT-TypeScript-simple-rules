@@ -20,7 +20,7 @@
         "qanary-component-eat-simple"
     ],
     "devDependencies": {
-        "prettier": "^2.8.3",
+        "prettier": "^3.9.10",
         "turbo": "^2.10.1"
     },
     "volta": {

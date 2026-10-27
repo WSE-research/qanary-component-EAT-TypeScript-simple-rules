@@ -30,7 +30,7 @@
         "eslint-config-sdk": "*",
         "jest": "^30.4.2",
         "jest-config-sdk": "*",
-        "prettier": "^2.8.3",
+        "prettier": "^3.9.10",
         "prettier-config-sdk": "*",
         "rdf-js": "^4.0.2",
         "ts-config-sdk": "*",
